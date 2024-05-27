@@ -7,9 +7,9 @@ exports('GetApartments', function() return ApartmentsTable end)
 Config = {}
 
 -- If you're not utilizing ox_lib, it's time to question your approach.
-Config.Target = "ox" -- "ox" or "qb"
-Config.Notify = "ox" -- "ox" or "qb"
-Config.Radial = "ox" -- "ox" or "qb"
+Config.Target = "qb" -- "ox" or "qb"
+Config.Notify = "qb" -- "ox" or "qb"
+Config.Radial = "qb" -- "ox" or "qb"
 Config.Inventory = "qb" -- "ox" or "qb"
 Config.Logs = "qb" -- "qb"
 
@@ -33,8 +33,9 @@ Config.DynamicDoors = false
 
 Config.PoliceJobNames = {  -- add multiple police jobs that are allowed to raid properties!
     "police",
-    -- "police2",
-    -- "police3",
+    "sasp",
+    "bcso",
+    "sasp",
 }
 
 Config.MinGradeToRaid = 3  -- Minimum grade to raid a property
@@ -50,7 +51,7 @@ Config.RealtorJobName = "realestate" -- Set your Real Estate job here
 
 -- If you are utilizing qb-banking and wish for the funds to be deposited directly into the Realestate bank account, set this value to true. 
 -- In case you are using an alternative Boss Menu, replace the qb-banking export with the appropriate script export or event.
-Config.QBManagement = false
+Config.QBManagement = true
 
 -- Realtor Commisions based on job grade, the rest goes to the owner, if any.
 Config.Commissions = {
@@ -62,7 +63,7 @@ Config.Commissions = {
 }
 
 -- Set this value to false if you don't want to assign a starting apartment.
-Config.StartingApartment = true
+Config.StartingApartment = false
 
 --- With this enabled, the customizer will open when starting apartment is false.
 Config.ShowCustomizerWhenNoStartingApartment = true
